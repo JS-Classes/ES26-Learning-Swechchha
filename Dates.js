@@ -1,10 +1,10 @@
 let x = new Date();
 //let xx = new Date("");
 //Date.now();
-console.log(x);
+//console.log(x);
 
 x.getFullYear();
-console.log(x.getMonth());
+//console.log(x.getMonth());
 x.getDay();
 x.getHours();
 x.getMinutes();
@@ -31,14 +31,29 @@ let getTimeDigitally = () => {
     return `${hourNormalized}:${min}:${sec}:${ms} ${period}`;
   };
 
-  console.log(getTimeDigitally);
+  //console.log(getTimeDigitally);
 
   setInterval(() => {
-      console.log(getTimeDigitally());
+     // console.log(getTimeDigitally());
   }, 1);
 
 
   //Find age of the person like: X Years Y Months Z Days
 
-  let x = "2020-12-12";
-  let y = new Date(1980, 2, 12);
+ let calculateAge = (dob) => {
+    let dobDate = new Date(dob);
+    let now = new Date();
+    
+    let ageInms = now - dobDate;
+    let ageInDays = ageInms / (1000 * 60 * 60 * 24);
+
+    let ageInYears = Math.floor(ageInDays / 365.25);
+    let remaniningDays = ageInDays % 365.25;
+
+    let ageInMonths = Math.floor(remaniningDays / 30);
+    remaniningDays = Math.round(remaniningDays % 30);
+
+    return `${ageInYears} Years, ${ageInMonths} Months, ${remaniningDays} Days`;
+ };
+
+ console.log(calculateAge("1980-11-10"));
