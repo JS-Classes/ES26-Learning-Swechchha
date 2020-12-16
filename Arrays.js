@@ -34,4 +34,7 @@ sum(...numbers);
 const allNumbers = [34, 45, ...numbers, 12, 89];
 
 //multidimensional array
-let numbers = [[3, 4, 5], [6, 1, 2, 3]]; //2 * 3 matrix
+//let numbers = [[3, 4, 5], [6, 1, 2, 3]]; //2 * 3 matrix
+
+
+authors.forEach(author => console.log(author));

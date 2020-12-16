@@ -151,3 +151,5 @@ let randString = GetRandomString(20);
 console.log(randString);
 
 //console.log('a'.charCodeAt(0)); // ASCII value of a 
+
+//1. Implement a calculator using ES6 classes.
